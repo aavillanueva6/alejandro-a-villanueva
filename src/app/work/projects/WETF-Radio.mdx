@@ -15,26 +15,29 @@ link: 'https://react-radio.onrender.com/'
 
 ## Overview
 
-Modern web application built with React and TypeScript for a type-safe frontend, styled with Bootstrap for responsive design. Backend implemented using Node.js and Express, with MongoDB as the document database. Complete JavaScript/TypeScript stack enabling efficient development and maintenance.
+Modern web application built with React and TypeScript for a type-safe frontend, styled with Bootstrap for responsive design. Backend implemented using Node.js and Express, with MongoDB an Apollo GraphQL for efficient data management. Complete JavaScript/TypeScript stack enabling efficient development and maintenance.
 
 ## Key Features
 
-- **Live Radio Streaming**: Configured custom audio streaming controls to allow users to listen to the station live from anywhere.
-- **PWA**: Application is PWA capable, allowing users to download the application to their local devices.
+- **Live Radio Streaming**: Immersive web-based radio player with custom controls, delivering high-quality audio streaming to listeners worldwide in real-time.
+- **PWA**: Seamlessly transforms into a native-like application experience, enabling offline access and instant launches from users' home screens across all devices.
+- **Responsive Show Schedule**: Dynamic display of weekly radio programming with show times, descriptions, and links to additional show details.
+- **Staff Profiles**: Dedicated sections showcasing station personalities with bios and show information.
 
 ## Technologies Used
 
-- **React**: For building the front-end codebase with clean, reusable components.
-- **TypeScript**: For a type-safe codebase. Ensuring that errors and bugs will be minimized, improving code maintainability.
-- **MongoDB and Apollo GraphQL**: For fast development with flexible documents, a single endpoint with precise control over fetched data, and client side caching for fast response to user interactions.
-- **Bootstrap**: For configuring a responsive and user friendly UI, that matches the client's branding.
+- **React and TypeScript**: Frontend architecture leveraging type-safe components for robust, maintainable code that scales.
+- **MongoDB and Apollo GraphQL**: Optimized data layer combining flexible document storage with precise GraphQL queries, enhanced by intelligent client-side caching for lightning-fast user interactions.
+- **Bootstrap**: Production-ready UI framework enabling responsive layouts and consistent brand styling across all device sizes.
 
 ## Challenges and Learnings
 
-One of the biggest challenges was identifying the client's desires for the project and building the site to meet their requirements. Learned the importance of building flexible data structures to the database - we identified a many-to-many relationship late in the development after building the data structure as a many-to-one relationship. This required a significant rework of portions of the project where the data was not assumed to be in an array format.
+Throughout development, a key challenge was translating client requirements into technical specifications while maintaining flexibility for future changes. This became particularly evident when we discovered a many-to-many relationship that had initially been architected as many-to-one. The subsequent database restructuring highlighted the critical importance of thorough data modeling during the planning phase.
 
-This project was also my first project utilizing TypeScript. I learned how to implement TypeScript, and the benefits of using it for error reducing while writing code for a project.
+The project also served as my introduction to TypeScript. Implementing strong typing not only reduced runtime errors but also improved code maintainability through enhanced IDE support and automated refactoring capabilities.
 
 ## Outcome
 
 The website is undergoing final review before launching to production. Upon client approval, the site will go live at their designated URL.
+
+Visit the site at <a href='https://react-radio.onrender.com/' target='_blank' rel='noopener noreferrer'>WETF Radio - The Jazz Station</a>
