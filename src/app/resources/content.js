@@ -47,11 +47,12 @@ const home = {
   label: 'Home',
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Web Developer and explorer</>,
+  headline: <>Web Developer</>,
   subline: (
     <>
-      I'm Alejandro, a Process Engineer in the biotech industry by
-      <br /> background. After hours, I teach myself software engineering.
+      Hey there! I'm Alejandro - I am an experienced process engineer in
+      biotech, but after hours you'll find me diving into software engineering
+      and teaching myself to code.
     </>
   ),
 };
@@ -93,22 +94,19 @@ const about = {
         role: 'Global Process Engineer',
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Project Manager for $5MM facility upgrade project, managed
+            construction, equipment and facility qualification and validation.
+            Delivered project through various challenges including workforce
+            reduction that impacted a significant portion of the project team
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
+            Led development of Global Engineering Standards for applicable
+            engineering areas (Commissioning and Qualification, Equipment
+            Specifications)
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: '/images/projects/project-01/cover-01.jpg',
-            alt: 'Once UI Project',
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
@@ -117,15 +115,21 @@ const about = {
         role: 'Senior Process Engineer',
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Served as a mentor to less experienced engineers and scientists in
+            applying data monitoring/visualization tools; maintaining compliance
+            with global standards; and consistently utilizing good engineering
+            practices.
           </>,
           <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
+            Led process engineering initiatives that delivered $10-150K in
+            annual savings per project while achieving 95%+ uptime at critical
+            manufacturing bottlenecks through enhanced equipment reliability and
+            optimized operations.
           </>,
         ],
-        images: [],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+        ],
       },
     ],
   },
@@ -148,40 +152,85 @@ const about = {
     title: 'Technical skills',
     skills: [
       {
-        title: 'Figma',
+        title: 'TypeScript / JavaScript',
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            I leverage TypeScript/JavaScript to develop full-stack web
+            applications, with a focus on building maintainable, type-safe code
+            while incorporating modern frameworks and best practices.
+          </>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: '/images/projects/project-01/cover-02.jpg',
-            alt: 'Project image',
-            width: 16,
-            height: 9,
-          },
-          {
-            src: '/images/projects/project-01/cover-03.jpg',
-            alt: 'Project image',
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: '/images/projects/project-01/cover-02.jpg',
+          //   alt: 'Project image',
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
+      // {
+      //   title: 'Next.js',
+      //   description: (
+      //     <>
+      //       Proficient in building performant web applications with Next.js,
+      //       leveraging its server-side rendering, dynamic routing, and built-in
+      //       API capabilities to create seamless user experiences.
+      //     </>
+      //   ),
+      //   // optional: leave the array empty if you don't want to display images
+      //   images: [],
+      // },
       {
-        title: 'Next.js',
+        title: 'React',
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Skilled in developing dynamic user interfaces with React, utilizing
+            hooks, state management, and component architecture to build
+            interactive and maintainable web applications.
+          </>
         ),
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: '/images/projects/project-01/cover-04.jpg',
-            alt: 'Project image',
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
+      },
+      {
+        title: 'Node.js and Express',
+        description: (
+          <>
+            Proficient in building scalable server-side applications using
+            Node.js and Express, implementing RESTful APIs, middleware, and
+            database integrations with a focus on performance and security.
+          </>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: 'SQL and NoSQL',
+        description: (
+          <>
+            Experienced in designing and implementing database solutions across
+            SQL and NoSQL platforms, utilizing structured relational databases
+            for data integrity and document-based systems for scalability and
+            flexibility.
+          </>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+
+      {
+        title: 'Bootstrap',
+        description: (
+          <>
+            Experienced in utilizing Bootstrap's responsive grid system,
+            components, and utilities to rapidly develop polished, mobile-first
+            user interfaces.
+          </>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [],
       },
     ],
   },
