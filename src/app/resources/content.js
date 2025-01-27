@@ -77,10 +77,18 @@ const about = {
     title: 'Introduction',
     description: (
       <>
-        Alejandro is a Seattle-based web developer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        his work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        Seattle-based developer Alejandro brings a distinctive background
+        bridging biotechnology and software development, with a first-principles
+        approach to solving complex technical challenges in web development. His
+        12-year foundation in chemical engineering has shaped his methodical
+        problem-solving style, particularly in identifying and preemptively
+        addressing potential failure points. Transitioning to web development,
+        Alejandro remains driven by his passion for creating direct, meaningful
+        impact through technology, carrying forward his focus on optimizing user
+        experiences and building robust solutions. His experience in highly
+        regulated environments with critical safety considerations brings a
+        unique perspective to developing maintainable, user-centric web
+        applications.
       </>
     ),
   },
