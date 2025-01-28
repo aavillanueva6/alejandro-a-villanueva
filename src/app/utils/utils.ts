@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 type Team = {
   name: string;
@@ -18,6 +18,7 @@ type Metadata = {
   tag?: string;
   team: Team[];
   link?: string;
+  repo?: string;
 };
 
 function getMDXFiles(dir: string) {
@@ -25,7 +26,7 @@ function getMDXFiles(dir: string) {
     throw new Error(`Directory not found: ${dir}`);
   }
 
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
 }
 
 function readMDXFile(filePath: string) {
@@ -33,18 +34,19 @@ function readMDXFile(filePath: string) {
     throw new Error(`File not found: ${filePath}`);
   }
 
-  const rawContent = fs.readFileSync(filePath, "utf-8");
+  const rawContent = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(rawContent);
 
   const metadata: Metadata = {
-    title: data.title || "",
+    title: data.title || '',
     publishedAt: data.publishedAt,
-    summary: data.summary || "",
-    image: data.image || "",
+    summary: data.summary || '',
+    image: data.image || '',
     images: data.images || [],
     tag: data.tag || [],
     team: data.team || [],
-    link: data.link || "",
+    link: data.link || '',
+    repo: data.repo || '',
   };
 
   return { metadata, content };
@@ -64,7 +66,7 @@ function getMDXData(dir: string) {
   });
 }
 
-export function getPosts(customPath = ["", "", "", ""]) {
+export function getPosts(customPath = ['', '', '', '']) {
   const postsDir = path.join(process.cwd(), ...customPath);
   return getMDXData(postsDir);
 }
