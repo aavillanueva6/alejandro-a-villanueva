@@ -147,7 +147,7 @@ const about = {
     institutions: [
       {
         name: 'Purdue University',
-        description: <>Studied Chemical Engineering.</>,
+        description: <>Bachelor of Science in Chemical Engineering.</>,
       },
       // {
       //   name: 'Build the Future',
@@ -163,9 +163,10 @@ const about = {
         title: 'TypeScript / JavaScript',
         description: (
           <>
-            I leverage TypeScript/JavaScript to develop full-stack web
-            applications, with a focus on building maintainable, type-safe code
-            while incorporating modern frameworks and best practices.
+            Proficient in developing full-stack web applications with
+            TypeScript/JavaScript, implementing type-safe architectures and
+            modern development practices to ensure code maintainability and
+            reliability.
           </>
         ),
         // optional: leave the array empty if you don't want to display images
@@ -178,25 +179,25 @@ const about = {
           // },
         ],
       },
-      // {
-      //   title: 'Next.js',
-      //   description: (
-      //     <>
-      //       Proficient in building performant web applications with Next.js,
-      //       leveraging its server-side rendering, dynamic routing, and built-in
-      //       API capabilities to create seamless user experiences.
-      //     </>
-      //   ),
-      //   // optional: leave the array empty if you don't want to display images
-      //   images: [],
-      // },
       {
         title: 'React',
         description: (
           <>
-            Skilled in developing dynamic user interfaces with React, utilizing
-            hooks, state management, and component architecture to build
-            interactive and maintainable web applications.
+            Demonstrated expertise in React development, implementing complex
+            component architectures, state management solutions, and custom
+            hooks to create high-performance user interfaces.
+          </>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: 'Next.js',
+        description: (
+          <>
+            Proficient in building performant web applications with Next.js,
+            leveraging its server-side rendering, dynamic routing, and built-in
+            API capabilities to create seamless user experiences.
           </>
         ),
         // optional: leave the array empty if you don't want to display images
@@ -206,9 +207,9 @@ const about = {
         title: 'Node.js and Express',
         description: (
           <>
-            Proficient in building scalable server-side applications using
-            Node.js and Express, implementing RESTful APIs, middleware, and
-            database integrations with a focus on performance and security.
+            Extensive experience in designing and implementing scalable
+            server-side applications using Node.js and Express, developing
+            RESTful APIs and integrating robust middleware solutions.
           </>
         ),
         // optional: leave the array empty if you don't want to display images
@@ -218,10 +219,9 @@ const about = {
         title: 'SQL and NoSQL',
         description: (
           <>
-            Experienced in designing and implementing database solutions across
-            SQL and NoSQL platforms, utilizing structured relational databases
-            for data integrity and document-based systems for scalability and
-            flexibility.
+            Proven track record in architecting and implementing database
+            solutions across SQL and NoSQL platforms, optimizing data models for
+            performance, scalability, and integrity.
           </>
         ),
         // optional: leave the array empty if you don't want to display images
@@ -232,9 +232,9 @@ const about = {
         title: 'Bootstrap',
         description: (
           <>
-            Experienced in utilizing Bootstrap's responsive grid system,
-            components, and utilities to rapidly develop polished, mobile-first
-            user interfaces.
+            Proficient in utilizing Bootstrap framework for mobile-first
+            development, implementing responsive design patterns and component
+            libraries to ensure consistent cross-device user experiences.
           </>
         ),
         // optional: leave the array empty if you don't want to display images
