@@ -1,11 +1,19 @@
-import { notFound } from "next/navigation";
-import { CustomMDX } from "@/components/mdx";
-import { getPosts } from "@/app/utils/utils";
-import { AvatarGroup, Button, Column, Flex, Heading, SmartImage, Text } from "@/once-ui/components";
-import { baseURL } from "@/app/resources";
-import { person } from "@/app/resources/content";
-import { formatDate } from "@/app/utils/formatDate";
-import ScrollToHash from "@/components/ScrollToHash";
+import { notFound } from 'next/navigation';
+import { CustomMDX } from '@/components/mdx';
+import { getPosts } from '@/app/utils/utils';
+import {
+  AvatarGroup,
+  Button,
+  Column,
+  Flex,
+  Heading,
+  SmartImage,
+  Text,
+} from '@/once-ui/components';
+import { baseURL } from '@/app/resources';
+import { person } from '@/app/resources/content';
+import { formatDate } from '@/app/utils/formatDate';
+import ScrollToHash from '@/components/ScrollToHash';
 
 interface WorkParams {
   params: {
@@ -14,14 +22,16 @@ interface WorkParams {
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "work", "projects"]);
+  const posts = getPosts(['src', 'app', 'work', 'projects']);
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
 export function generateMetadata({ params: { slug } }: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slug);
+  let post = getPosts(['src', 'app', 'work', 'projects']).find(
+    (post) => post.slug === slug
+  );
 
   if (!post) {
     return;
@@ -35,7 +45,9 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
     image,
     team,
   } = post.metadata;
-  let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
+  let ogImage = image
+    ? `https://${baseURL}${image}`
+    : `https://${baseURL}/og?title=${title}`;
 
   return {
     title,
@@ -45,7 +57,7 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
     openGraph: {
       title,
       description,
-      type: "article",
+      type: 'article',
       publishedTime,
       url: `https://${baseURL}/work/${post.slug}`,
       images: [
@@ -55,7 +67,7 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [ogImage],
@@ -64,7 +76,9 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
 }
 
 export default function Project({ params }: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === params.slug);
+  let post = getPosts(['src', 'app', 'work', 'projects']).find(
+    (post) => post.slug === params.slug
+  );
 
   if (!post) {
     notFound();
@@ -76,14 +90,14 @@ export default function Project({ params }: WorkParams) {
     })) || [];
 
   return (
-    <Column as="section" maxWidth="m" horizontal="center" gap="l">
+    <Column as='section' maxWidth='m' horizontal='center' gap='l'>
       <script
-        type="application/ld+json"
+        type='application/ld+json'
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
@@ -93,33 +107,41 @@ export default function Project({ params }: WorkParams) {
               : `https://${baseURL}/og?title=${post.metadata.title}`,
             url: `https://${baseURL}/work/${post.slug}`,
             author: {
-              "@type": "Person",
+              '@type': 'Person',
               name: person.name,
             },
           }),
         }}
       />
-      <Column maxWidth="xs" gap="16">
-        <Button href="/work" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
+      <Column maxWidth='xs' gap='16'>
+        <Button
+          href='/work'
+          variant='tertiary'
+          weight='default'
+          size='s'
+          prefixIcon='chevronLeft'
+        >
           Projects
         </Button>
-        <Heading variant="display-strong-s">{post.metadata.title}</Heading>
+        <Heading variant='display-strong-s'>{post.metadata.title}</Heading>
       </Column>
       {post.metadata.images.length > 0 && (
         <SmartImage
           priority
-          aspectRatio="16 / 9"
-          radius="m"
-          alt="image"
+          aspectRatio='16 / 9'
+          radius='m'
+          alt='image'
           src={post.metadata.images[0]}
         />
       )}
-      <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
-        <Flex gap="12" marginBottom="24" vertical="center">
-          {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m" />}
-          <Text variant="body-default-s" onBackground="neutral-weak">
+      <Column style={{ margin: 'auto' }} as='article' maxWidth='xs'>
+        <Flex gap='12' marginBottom='24' vertical='center'>
+          {post.metadata.team && (
+            <AvatarGroup reverse avatars={avatars} size='m' />
+          )}
+          {/*<Text variant="body-default-s" onBackground="neutral-weak">
             {formatDate(post.metadata.publishedAt)}
-          </Text>
+          </Text>*/}
         </Flex>
         <CustomMDX source={post.content} />
       </Column>
